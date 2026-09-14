@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Apex Media — Digital marketing, paid advertising, websites, SEO, graphic design and content creation.">
+<title>Apex Media | Digital Marketing Agency</title>
+<style>
+:root{
+  --bg:#050817; --panel:#0b1024; --panel2:#0e1530; --text:#f7f8ff;
+  --muted:#aeb7d3; --cyan:#20d9ff; --blue:#2678ff; --purple:#a13cff;
+  --pink:#f03cff; --line:rgba(91,130,255,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(36,109,255,.16),transparent 28%),
+    radial-gradient(circle at 15% 35%,rgba(160,50,255,.12),transparent 30%),
+    var(--bg); color:var(--text); line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);
+  background:rgba(5,8,23,.78);border-bottom:1px solid var(--line);
+}
+.navbar{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px}
+.logo img{width:48px;height:48px;object-fit:contain}
+.logo span{letter-spacing:.5px}
+.logo b{background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;color:transparent}
+.navlinks{display:flex;gap:26px;color:#dce2f5;font-size:14px}
+.navlinks a:hover{color:var(--cyan)}
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;
+  background:linear-gradient(100deg,var(--purple),var(--blue),var(--cyan));font-weight:800;
+  box-shadow:0 0 28px rgba(52,112,255,.22)
+}
+.hero{padding:92px 0 75px;min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.kicker{color:var(--cyan);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(45px,6vw,78px);line-height:1.03;margin:17px 0}
+.gradient{background:linear-gradient(90deg,#fff 15%,#b44cff 50%,#21e0ff 90%);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.secondary{padding:11px 19px;border:1px solid var(--line);border-radius:999px;color:#dfe7ff;background:rgba(255,255,255,.025)}
+.contact-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.pill{border:1px solid var(--line);background:rgba(12,19,45,.7);padding:9px 13px;border-radius:12px;font-size:13px;color:#cbd5ef}
+.hero-card{
+  min-height:430px;border:1px solid var(--line);border-radius:30px;padding:28px;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,rgba(15,22,55,.94),rgba(6,10,28,.96));
+  box-shadow:0 30px 90px rgba(0,0,0,.35),inset 0 0 60px rgba(69,79,255,.06)
+}
+.hero-card:before{content:"";position:absolute;width:260px;height:260px;background:var(--purple);filter:blur(110px);opacity:.22;right:-70px;top:-70px}
+.dashboard{position:relative;z-index:1;margin-top:35px;border:1px solid rgba(90,130,255,.3);border-radius:22px;padding:18px;background:#070c20}
+.chart{height:190px;display:flex;align-items:flex-end;gap:10px;padding:22px 12px 10px;border-bottom:1px solid var(--line)}
+.bar{flex:1;border-radius:8px 8px 2px 2px;background:linear-gradient(180deg,var(--cyan),var(--purple));box-shadow:0 0 20px rgba(33,217,255,.14)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stat{background:#0d1430;border:1px solid var(--line);padding:12px;border-radius:12px}
+.stat strong{display:block;font-size:20px}.stat small{color:var(--muted)}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.section-head .kicker{margin-bottom:10px}.section-head h2{font-size:42px;line-height:1.1;margin-bottom:13px}.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  padding:25px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(15,22,48,.88),rgba(7,11,28,.88));
+  transition:.25s;position:relative;overflow:hidden
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(32,217,255,.5);box-shadow:0 20px 45px rgba(0,0,0,.25)}
+.icon{font-size:31px;margin-bottom:16px}.card h3{font-size:19px;margin-bottom:8px}.card p{font-size:14px;color:var(--muted)}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.about-box{padding:36px;border-radius:28px;background:linear-gradient(145deg,#0c1432,#080c20);border:1px solid var(--line)}
+.about-box h3{font-size:31px;line-height:1.15;margin-bottom:15px}
+.about-box p,.about li{color:var(--muted)}
+.about ul{list-style:none;display:grid;gap:13px;margin-top:22px}
+.about li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:10px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step span{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));font-weight:900;margin-bottom:18px}
+.contact{
+  text-align:center;padding:65px 25px;border:1px solid var(--line);border-radius:30px;
+  background:radial-gradient(circle at 50% 0,rgba(44,117,255,.2),transparent 50%),#090e25
+}
+.contact h2{font-size:42px;margin-bottom:12px}.contact p{color:var(--muted);max-width:650px;margin:0 auto 25px}
+footer{padding:28px 0;border-top:1px solid var(--line);color:#9da8c5;font-size:13px}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){
+ .hero,.about{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr}
+ .navlinks{display:none}.hero{padding-top:65px}
+}
+@media(max-width:560px){
+ .grid{grid-template-columns:1fr}.hero-card{min-height:360px}.section-head h2,.contact h2{font-size:34px}
+ .hero p{font-size:16px}.navbar{height:70px}.logo img{width:42px;height:42px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navbar">
+    <a class="logo" href="#home"><img src="apex-media-logo.png" alt="Apex Media logo"><span><b>APEX</b> MEDIA</span></a>
+    <div class="navlinks">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </div>
+    <a class="cta" href="https://wa.me/923099122897" target="_blank">Get Started</a>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero container">
+  <div>
+    <div class="kicker">Ideas • Strategy • Results</div>
+    <h1>Grow Your Brand With <span class="gradient">Digital Marketing.</span></h1>
+    <p>Apex Media helps businesses build a powerful online presence through creative strategy, performance marketing, modern websites and scroll-stopping content.</p>
+    <div class="actions">
+      <a class="cta" href="https://wa.me/923099122897" target="_blank">Let's Talk on WhatsApp</a>
+      <a class="secondary" href="#services">Explore Services</a>
+    </div>
+    <div class="contact-pills">
+      <div class="pill">📞 0309 9122897</div>
+      <div class="pill">📸 @Apexmedi221</div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="kicker">Performance Dashboard</div>
+    <div class="dashboard">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Growth Overview</strong><span style="color:var(--cyan);font-size:13px">+78.4%</span>
+      </div>
+      <div class="chart">
+        <div class="bar" style="height:34%"></div><div class="bar" style="height:48%"></div>
+        <div class="bar" style="height:43%"></div><div class="bar" style="height:66%"></div>
+        <div class="bar" style="height:78%"></div><div class="bar" style="height:91%"></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>2.4K</strong><small>Leads</small></div>
+        <div class="stat"><strong>4.8x</strong><small>ROAS</small></div>
+        <div class="stat"><strong>92%</strong><small>Reach</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head"><div class="kicker">What We Do</div><h2>Our Digital Services</h2><p>Everything your brand needs to stand out, attract customers and grow online.</p></div>
+    <div class="grid">
+      <div class="card"><div class="icon">📱</div><h3>Social Media Marketing</h3><p>Build engagement and a consistent, professional brand presence.</p></div>
+      <div class="card"><div class="icon">📈</div><h3>Google Ads (PPC)</h3><p>Target high-intent customers and turn ad spend into measurable results.</p></div>
+      <div class="card"><div class="icon">∞</div><h3>Meta Ads</h3><p>Reach the right audience across Facebook and Instagram with smart campaigns.</p></div>
+      <div class="card"><div class="icon">✉️</div><h3>Email Marketing</h3><p>Nurture leads and create repeat customers with strategic campaigns.</p></div>
+      <div class="card"><div class="icon">🌐</div><h3>Website Design</h3><p>Fast, responsive and conversion-focused websites that look premium.</p></div>
+      <div class="card"><div class="icon">🚀</div><h3>SEO</h3><p>Improve visibility, rankings and organic traffic with practical SEO.</p></div>
+      <div class="card"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Scroll-stopping creatives, branding and marketing designs.</p></div>
+      <div class="card"><div class="icon">🎬</div><h3>Content Creation</h3><p>Creative content designed to capture attention and communicate clearly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div class="about-box">
+      <div class="kicker">Why Apex Media</div>
+      <h3>Strategy first. Creativity always. Growth that matters.</h3>
+      <p>We combine creative thinking with performance-focused digital marketing to help brands compete in a fast-moving online world.</p>
+      <ul>
+        <li>Result-driven strategies</li><li>Creative and modern execution</li><li>Transparent communication</li><li>Performance-focused campaigns</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-head" style="text-align:left;margin:0 0 25px"><div class="kicker">Our Promise</div><h2>Make Your Business Impossible to Ignore.</h2><p>From your first creative to your next campaign, we focus on the details that turn attention into action.</p></div>
+      <div class="grid" style="grid-template-columns:repeat(2,1fr)">
+        <div class="card"><h3>Creative</h3><p>Premium visual communication built around your brand.</p></div>
+        <div class="card"><h3>Performance</h3><p>Campaigns designed around clear business goals.</p></div>
+        <div class="card"><h3>Growth</h3><p>Continuous optimization instead of one-time marketing.</p></div>
+        <div class="card"><h3>Support</h3><p>Direct communication when your business needs us.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head"><div class="kicker">How We Work</div><h2>Simple Process. Serious Results.</h2></div>
+    <div class="process">
+      <div class="card step"><span>01</span><h3>Discover</h3><p>We understand your business, audience, competitors and goals.</p></div>
+      <div class="card step"><span>02</span><h3>Build</h3><p>We create the strategy, content, website and campaigns your brand needs.</p></div>
+      <div class="card step"><span>03</span><h3>Grow</h3><p>We measure performance, optimize continuously and scale what works.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="kicker">Ready to Grow?</div>
+      <h2>Let's Grow Your Business Online.</h2>
+      <p>Tell us what you want to achieve and let's build a digital strategy around it.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="cta" href="https://wa.me/923099122897" target="_blank">WhatsApp: 0309 9122897</a>
+        <a class="secondary" href="https://instagram.com/Apexmedi221" target="_blank">Instagram: @Apexmedi221</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© 2026 Apex Media. All rights reserved.</span>
+    <span>Digital Marketing • Ads • Websites • SEO • Creatives • Content</span>
+  </div>
+</footer>
+</body>
+</html>
